@@ -1,0 +1,27 @@
+{
+  "mappings": {
+    "properties": {
+      "id": {
+        "type": "keyword"
+      },
+      "name": {
+        "type": "text"
+      },
+      "type": {
+        "type": "keyword"
+      },
+      "chef": {
+        "type": "keyword"
+      },
+      "servings": {
+        "type": "integer"
+      },
+      "ingredients": {
+        "type": "keyword"
+      },
+      "instructions": {
+        "type": "text"
+      }
+    }
+  }
+}

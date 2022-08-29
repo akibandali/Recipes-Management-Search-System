@@ -1,0 +1,28 @@
+server:
+  port: 8083
+
+spring:
+  cloud:
+    stream:
+      default-binder: kafka
+      kafka:
+        binder:
+          autoAddPartitions: true
+          brokers: pkc-ymrq7.us-east-2.aws.confluent.cloud:9092
+          configuration:
+            security:
+              protocol: SASL_SSL
+            sasl:
+              jaas:
+                config: org.apache.kafka.common.security.plain.PlainLoginModule required username='HZYMWQKU3DUVB67N' password='w9/2Cvq0UJv4ySrhCIHyZoHaTDBoqHtE3Xc81UkwPursoXLmkNuY9bhe1Xg0zr8A';
+              mechanism: PLAIN
+      bindings:
+        recipe-produce:
+          destination: recipe
+          contentType: application/json
+          group: recipe-management-service
+          producer:
+            partitionCount: 1
+ #     default:
+ #       producer:
+  #        partitionKeyExpression: 'headers.operation' also set a header as operation
