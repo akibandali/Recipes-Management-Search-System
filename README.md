@@ -14,4 +14,15 @@ For async processing→ Kafka.
 
 It is production ready→ as we can do the scaling of any of the MS based on the traffic received.
 
+Run Instruction:
+Elastic Search:
+It requires running an elastic search on the local host.
+Download Elasticsearch from here. https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.4.0-
+windows-x86_64.zip
+Extract the zip file
+Disable the security, inside config/elasticsearch.yaml. please change all fields to false.
+Now Run bin/elasticsearch.bat
+
+Kafka: No need to install Kafka, it uses my already hosted Kafka(free version for personal training).
+
 
