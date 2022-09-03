@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import com.recipes.authoring.dto.RecipeDTO;
 import com.recipes.authoring.service.RecipeService;
 
@@ -21,13 +20,14 @@ public class RecipeController {
         return new ResponseEntity<>(recipe, HttpStatus.OK);
     }
 
-    @PostMapping(path = "", consumes = "application/json", produces = "application/json")
+    @PostMapping(consumes = "application/json", produces = "application/json")
     public ResponseEntity<String> createNewRecipe (@RequestBody RecipeDTO recipe) {
         return new ResponseEntity<>(recipeService.createNewRecipe(recipe), HttpStatus.CREATED);
     }
 
     @PutMapping(path = "/{id}", consumes = "application/json")
-    public ResponseEntity<Void> updateRecipe (@PathVariable String id, @RequestBody RecipeDTO recipeDTO) {
+    public ResponseEntity<Void> updateRecipe (@PathVariable String id, @RequestBody
+        RecipeDTO recipeDTO) {
         recipeService.updateRecipe(id, recipeDTO);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }

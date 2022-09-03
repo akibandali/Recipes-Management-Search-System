@@ -23,6 +23,4 @@ spring:
           group: recipe-management-service
           producer:
             partitionCount: 1
- #     default:
- #       producer:
-  #        partitionKeyExpression: 'headers.operation' also set a header as operation
+

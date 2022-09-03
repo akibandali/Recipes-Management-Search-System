@@ -28,10 +28,10 @@ public class RecipeConsumer {
         if (operation == null) {
             return;
         }
-        if (operation.equals("create") || operation.equals("update")) {
+        if ((OperationType.CREATE.value().equals(operation) || (OperationType.UPDATE.value().equals(operation)))) {
             elasticSearchGateway.indexDocument(recipeMessage.getPayload());
         }
-        else if (operation.equals("delete")) {
+        else if (OperationType.DELETE.value().equals(operation)) {
             elasticSearchGateway.deleteDocument(recipeMessage.getPayload().getId());
         }
     }

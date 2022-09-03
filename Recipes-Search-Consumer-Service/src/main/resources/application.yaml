@@ -1,6 +1,11 @@
 server:
   port: 8082
 
+
+elastic:
+  search:
+    host: 'localhost'
+    port: 9200
 spring:
   cloud:
     stream:

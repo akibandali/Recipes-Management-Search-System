@@ -14,7 +14,7 @@ import org.springframework.context.annotation.Configuration;
 public class RecipeConsumerConfiguration {
     @Value("${elastic.search.host:localhost}")
     private String host;
-    @Value("${elastic.search.post:9200}")
+    @Value("${elastic.search.port:9200}")
     private Integer port;
 
     @Bean
