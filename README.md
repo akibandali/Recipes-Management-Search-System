@@ -11,7 +11,7 @@ Recipes-Search-Service→ Searching in Elastic Search.
 
 For Fast searching-> I used Elastic Search.
 For async processing→ Kafka.
-For database-> For simplicity and testing purpose I used in memory db(H2). If I am given some time I would love to replace it with couchbase or MongoDB.
+For database-> For simplicity and testing purpose I used in memory db(H2). If I am given some time I would like to replace it with couchbase or MongoDB.
 
 It is production ready→ as we can do the scaling of the MS based on the traffic received.
 Multiple instances of search service can be deployed.
