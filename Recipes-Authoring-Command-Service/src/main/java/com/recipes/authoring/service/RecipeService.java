@@ -59,8 +59,6 @@ public class RecipeService {
     }
 
     public void deleteRecipeById (String id) {
-        //Calling just to catch the not found exception
-        findById(id);
         recipeH2Repository.deleteById(id);
         producer.sendRecipe(Recipe.builder().id(id).build(), OperationType.DELETE.value());
     }

@@ -58,8 +58,6 @@ public class RecipeServiceTest {
 
     @Test
     public void deleteRecipeById () {
-        Recipe testRecipe = testRecipe();
-        doReturn(Optional.of(testRecipe)).when(recipeH2Repository).findById(RECIPE_ID);
         doNothing().when(recipeH2Repository).deleteById(RECIPE_ID);
         recipeService.deleteRecipeById(RECIPE_ID);
         Mockito.verify(recipeH2Repository, times(1)).deleteById(RECIPE_ID);
