@@ -1,4 +1,4 @@
-/*
+
 package com.recipes.authoring.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -107,4 +107,3 @@ public class RecipeControllerITTest {
         return "";
     }
 }
-*/
