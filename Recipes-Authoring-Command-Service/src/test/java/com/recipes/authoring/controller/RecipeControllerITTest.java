@@ -1,3 +1,4 @@
+/*
 package com.recipes.authoring.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -19,7 +20,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class RecipeControllerIT {
+public class RecipeControllerITTest {
 
     @Autowired
     private MockMvc mockMvc;
@@ -106,3 +107,4 @@ public class RecipeControllerIT {
         return "";
     }
 }
+*/
